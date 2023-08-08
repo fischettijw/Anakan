@@ -1,0 +1,16 @@
+# %%
+# W3Schools     https://www.w3schools.com/python/default.asp
+
+
+# %%
+name = "John"
+age = 30
+
+print(name, "is", age, "years old.")
+
+concat = name + " is " + str(age) + " years old."
+print(concat)
+
+print(f'{name} is {age} years old.')
+
+
