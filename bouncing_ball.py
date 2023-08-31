@@ -8,7 +8,7 @@ def rnd_color():     # create random color function
 	return clr
 	
 
-# define screen size, fps, and create a Clock
+# define screen size, fps, and create a FPS Clock
 width = 300
 height = 300
 fps = 30
@@ -27,6 +27,7 @@ y_speed = 6 #random.randint(3, 8)
 # 						  random.randint(1, 255),
 # 						  random.randint(1, 255),0)    # R G B
 ball_color = rnd_color()
+ball_color = "yellow"
 radius = 20
 
 # Game loop
@@ -43,14 +44,14 @@ while running:
 
     if x_ball > (width - radius) or x_ball < (0 + radius):
         x_speed *= -1
-        ball_color = rnd_color()
+        # ball_color = rnd_color()
 
     if y_ball > (height - radius) or y_ball < radius:
         y_speed *= -1
-        ball_color = rnd_color()
+        # ball_color = rnd_color()
 	
     # Draw to Buffer
-    screen.fill("yellow")
+    screen.fill("cyan")
     pygame.draw.circle(screen, ball_color, (x_ball, y_ball), radius)
 
     # Render to Screen
