@@ -1,4 +1,5 @@
 import os
+from color_text import *
 
 def draw_board():
     os.system("cls")   # On REPLIT use os.system("clear")
@@ -29,9 +30,9 @@ draw_board()
 for turn_num in range(0,9):
 
     if turn_num in [0,2,4,6,8]:
-        player = "X"
+        player = f"{RED}X{DEFAULT}"
     else:
-        player = "Y"
+        player = f"{GREEN}Y{DEFAULT}"
     
     x_o = int(input(f"What position for the next {player}? "))
     squ[x_o] = player
@@ -42,3 +43,4 @@ for turn_num in range(0,9):
 
         
 print(is_winner())
+print('Winner: ',is_winner()[1])
